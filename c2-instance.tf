@@ -19,7 +19,7 @@ provider "aws" {
 # Resource Block
 
 resource "aws_instance" "ec2_instnce" {
-    ami = data.aws_ami.amzlinux.id
+    ami = data.aws_ami.CentOS.id
     instance_type = var.aws_instance
     key_name = var.key_name
     user_data = file ("${path.module}/app1-install.sh")
@@ -125,13 +125,12 @@ output "public_ip" {
 
  # datasource Block
 
- data "aws_ami" "amzlinux" {
+ data "aws_ami" "CentOS" {
     most_recent = true
-    owners = ["amazon"]
+    owners = ["679593333241"]
     filter {
       name = "name"
-      values = ["amzn2-ami-kernel-5.10-hvm-*-gp2"]
-    
+      values = ["CentOS-7-*"]
     }
 
     filter {
