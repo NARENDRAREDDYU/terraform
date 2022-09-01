@@ -124,6 +124,10 @@ output "public_ip" {
 
 
  # datasource Block
+ /*Data sources allow data to be fetched or computed for use else where 
+ in Terraform configuration
+ Use of data sources allow a terraform configuration to make use of information defined outside of terraform , or defined 
+ by another seperate terraform configuration    */
 
  data "aws_ami" "CentOS" {
     most_recent = true
