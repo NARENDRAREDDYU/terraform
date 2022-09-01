@@ -103,13 +103,13 @@ variable "region" {
 
 # output Block
 
-output "aws_instance_type" {
+output "public_ip" {
     description = "display the public_ip"
     value = aws_instance.ec2_instnce.public_ip
   
 }
 
- output "aws_instance" {
+ output "public_dns" {
     description = "display the public_dns"
     value = aws_instance.ec2_instnce.public_dns
    
