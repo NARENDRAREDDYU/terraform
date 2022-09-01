@@ -84,6 +84,13 @@ tags ={
 
 # Input variable Block
 
+/* Input variables serves as parameter for a terraform module ,
+allow aspects of 
+the module of the customized 
+without altering the modules 
+own source 
+source code, and allowing modules to be shared between different configuration */
+
 variable "aws_instance" {
     description = "aws instance type"
     type = string
